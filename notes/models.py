@@ -2,7 +2,9 @@ from django.db import models
 
 
 class Note(models.Model):
-    title = models.CharField(max_length=200)  # Title of the note
+    title = models.CharField(
+        max_length=200, blank=False, null=False
+    )  # Title of the note
     created_at = models.DateTimeField(
         auto_now_add=True
     )  # Timestamp when the note is created
