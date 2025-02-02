@@ -12,5 +12,8 @@ class Note(models.Model):
         auto_now=True
     )  # Timestamp when the note is last updated
 
+    class Meta:
+        ordering = ["-updated_at"]
+
     def __str__(self):
         return self.title
